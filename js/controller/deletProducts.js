@@ -1,6 +1,9 @@
 function deleteProduct(productId) {
+    // const repoUrl = "http://localhost:3000"
+    const repoUrl = "https://alura-geek-json-server.vercel.app"
+
     // Enviar una solicitud DELETE al servidor para eliminar el producto
-    fetch(`http://localhost:3000/products/${productId}`, {
+    fetch(`${repoUrl}/products/${productId}`, {
         method: 'DELETE'
     })
     .then(response => {

@@ -1,4 +1,7 @@
 function addProducts() {
+        // const repoUrl = "http://localhost:3000"
+        const repoUrl = "https://alura-geek-json-server.vercel.app"
+
         let form = document.querySelector('form');
         let nameProductForm = form.querySelector('#nameProductForm');
         let priceProductForm = form.querySelector('#priceProductForm');
@@ -49,7 +52,7 @@ function addProducts() {
             };
 
             // Realizar la solicitud POST a la API
-            fetch("http://localhost:3000/products", options)
+            fetch(`${repoUrl}/products`, options)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error("La solicitud no fue exitosa");

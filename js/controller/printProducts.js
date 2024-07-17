@@ -1,10 +1,13 @@
 import { deleteProduct } from "./deletProducts.js";
 
 function printProducts() {
+    // const repoUrl = "http://localhost:3000"
+    const repoUrl = "https://alura-geek-json-server.vercel.app"
+
     let products = document.getElementById('products');
     console.log("llegue a printProductos")
 
-    fetch("http://localhost:3000/products")
+    fetch(`${repoUrl}/products`)
         .then(response => response.json())
         .then(data => {
             data.forEach(element => {
